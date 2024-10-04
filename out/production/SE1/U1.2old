@@ -1,13 +1,14 @@
 public static String translateNumber(int zahl) {
 	zahl--;
 	String[] werte = {"eins", "zwei", "drei", "vier", "fuenf", "sechs", "sieben", "acht", "neun", "zehn"};
-	
+
+	String ausgabe;
+
 	try{
-		String ausgabe = werte[zahl];
+		ausgabe = werte[zahl];
 	} catch (IndexOutOfBoundsException e) {
-		System.out.println("Übersetzung der Zahl" + (--zahl) + "nicht möglich (???)");
-		return;
+	    ausgabe = "Übersetzung der Zahl" + (++zahl) + "nicht möglich. Version: " + version;
 	}
 	
-	return ausgabe;
+	return ausgabe;
 }

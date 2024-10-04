@@ -10,7 +10,19 @@ public class GermanTranslator implements Translator {
 	public String translateNumber( int number ) {
 		// [ihr Source Code aus Übung 1-2]
 
-		return "null";
+		number--;
+
+		String[] werte = {"eins", "zwei", "drei", "vier", "fuenf", "sechs", "sieben", "acht", "neun", "zehn"};
+
+		String ausgabe;
+
+		try{
+			ausgabe = werte[number];
+		} catch (IndexOutOfBoundsException e) {
+			ausgabe = "Übersetzung der Zahl " + (++number) + " nicht möglich. Version: " + version;
+		}
+
+		return ausgabe;
 	}
 
 	/**
